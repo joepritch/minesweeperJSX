@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import TicketList from './TicketList';
-import NewTicketForm from './NewTicketForm';
-import MyStyledComponent from './MyStyledComponent';
+import Gameboard from './Gameboard'
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
@@ -17,10 +15,10 @@ function App(){
     <div>
       <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet"/>
       <style global jsx>{`
-        .redBackground{
+        *{
           background-color: ${randColor()};
         }
-        .redBackground:hover{
+        *:hover{
           background-color: ${randColor()};
           color: white;
         }
@@ -30,10 +28,8 @@ function App(){
       `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={TicketList} />
-        <Route path='/newTicket' component={NewTicketForm} />
-       </Switch>
-      <MyStyledComponent/>
+        <Route exact path='/' component={Gameboard} />
+      </Switch>
     </div>
   );
 }
