@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Gameboard from './Gameboard';
 import randColor from './RandColor';
+import Leaderboard from './Leaderboard';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
@@ -24,7 +25,8 @@ function App(){
       `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={Gameboard} />
+        <Route exact path='/' component={Gameboard}/>
+        <Route exact path='/leaderboard' component={Leaderboard}/>
       </Switch>
     </div>
   );
