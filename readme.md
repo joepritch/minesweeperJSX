@@ -15,6 +15,8 @@ Error page
 Unforeseen issues:
 It seems like trying to change the class of an element in React might require the use of state.
 
+Getting the current route seems more complex than I anticipated.
+
 Development Differences:
 
   The Angular version of this project relied on a lot of Angular-specific code such as ngFor, ngClass, and adding click functions directly into the html.

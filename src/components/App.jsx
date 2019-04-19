@@ -1,13 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import Gameboard from './Gameboard';
+import randColor from './RandColor';
 import { Switch, Route } from 'react-router-dom';
-
-function randColor(){
-  var colorNumber = Math.floor(100000 + Math.random()*900000);
-  var color = '#'+colorNumber.toString();
-  return color;
-}
 
 function App(){
 
@@ -17,10 +12,15 @@ function App(){
       <style global jsx>{`
         body{
           background-color: ${randColor()};
+          animation: rgb 10s infinite alternate;
         }
-        body:hover{
-          background-color: ${randColor()};
-          color: white;
+
+        @keyframes rgb {
+          0%   {background-color:${randColor()};}
+          25%  {background-color:${randColor()};}
+          50%  {background-color:${randColor()};}
+          75%  {background-color:${randColor()};}
+          100% {background-color:${randColor()};}
         }
         html{
           font-family: 'Dokdo', cursive;
