@@ -22,7 +22,6 @@ function Cell(props){
             background-color:darkgrey;
             font-size:10px;
           }
-          
           .cellClicked{
             background-color:lightgrey;
             border:solid 1px darkgrey;
