@@ -21,3 +21,4 @@ Looked at the react-router-dom documentation and discovered `location.hash`
 Development Differences:
 
   The Angular version of this project relied on a lot of Angular-specific code such as ngFor, ngClass, and adding click functions directly into the html.
+ 

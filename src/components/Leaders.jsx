@@ -4,50 +4,29 @@ import PropTypes from 'prop-types';
 function Leaders(props){
 
   var url = location.hash;
-  console.log(url);
+  var score = (<h3>{props.score}</h3>)
 
-  if (url == '#/') {
+  function htmlBuilder(html){
     return(
       <div>
         <style jsx>{`
             hr{
               border:solid 1px blue;
             }
+            `}</style>
+          <h1>{props.name}</h1>
+          {html}
+          <hr/>
+        </div>
+      );
+    }
 
-                `}</style>
-        <h1>{props.name}</h1>
-        <hr/>
-      </div>
-
-    );
+  if (url == '#/') {
+    return htmlBuilder(null);
   } else if (url == '#/leaderboard') {
-      return(
-        <div>
-          <style jsx>{`
-              hr{
-                border:solid 1px blue;
-              }
-              `}</style>
-            <h1>{props.name}</h1>
-            <h3>{props.score}</h3>
-            <hr/>
-          </div>
-        );
+      return htmlBuilder(score)
   } else {
-    return (
-      <div>
-        <style jsx>{`
-            hr{
-              border:solid 1px blue;
-            }
-
-                `}</style>
-              <h1>How did you get here</h1>
-              <h1>(location.hash)</h1>
-        <hr/>
-      </div>
-
-    );
+    return htmlBuilder("How are you here?")
   }
 
 }
