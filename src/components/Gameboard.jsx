@@ -87,7 +87,8 @@ function Gameboard(){
       <style jsx>{`
       .minefield{
         display: grid;
-        grid-template-area:
+        width:375px;
+        grid-template-areas:
         "cell1 cell2 cell3 cell4 cell5"
         "cell6 cell7 cell8 cell9 cell10"
         "cell11 cell12 cell13 cell14 cell15"
@@ -99,6 +100,7 @@ function Gameboard(){
       <div className="minefield">
         {cells.map((cell, index) =>
           <Cell mine={cell.mine}
+            id={index}
             key={index}/>
         )}
       </div>
