@@ -13,6 +13,7 @@ leaderboard page (maybe the leaderboard page is more in-depth/ has more informat
 Error page
 
 Unforeseen issues:
+It seems like trying to change the class of an element in React might require the use of state.
 
 Development Differences:
 

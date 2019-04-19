@@ -103,7 +103,6 @@ function Gameboard(){
             key={index}/>
         )}
       </div>
-      <h1>test</h1>
     </div>
   );
 }

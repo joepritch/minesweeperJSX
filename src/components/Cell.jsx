@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 function Cell(props){
 
+  function test(){
+
+    alert(id)
+  }
+
 
   return(
     <div>
@@ -16,14 +21,13 @@ function Cell(props){
         background-color:darkgrey;
         font-size:10px;
       }
-      .cell:hover{
+      .cellClicked{
         background-color:lightgrey;
         border:solid 1px darkgrey;
       }
     `}</style>
-      <div className="cell">
-        <h1>{props.mine}</h1>
-        <p>{props.id}</p>
+      <div onClick={test} id={props.id} className="cell">
+        <h1>{props.mine} {props.id}</h1>
       </div>
     </div>
   );
