@@ -1,84 +1,83 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Cell from './Cell'
+import Cell from './Cell';
 
 const cells = [
   {
-    mine: 'true'
+    mine: 1
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'true'
+    mine: 1
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'true'
+    mine: 1
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   },
   {
-    mine: 'false'
+    mine: 0
   }
-]
+];
 
 function Gameboard(){
 
@@ -87,14 +86,14 @@ function Gameboard(){
       <style jsx>{`
       .minefield{
         display: grid;
-        width:375px;
+        width:250px;
         grid-template-areas:
         "cell1 cell2 cell3 cell4 cell5"
         "cell6 cell7 cell8 cell9 cell10"
         "cell11 cell12 cell13 cell14 cell15"
         "cell16 cell17 cell18 cell19 cell20"
         "cell21 cell22 cell23 cell24 cell25";
-        border: solid 3px white;
+        border: groove 5px white;
       }
     `}</style>
       <div className="minefield">
@@ -106,7 +105,7 @@ function Gameboard(){
       </div>
       <h1>test</h1>
     </div>
-  )
+  );
 }
 
 
