@@ -3,10 +3,9 @@ function randColor(){
   var g = getNumber();
   var b = getNumber();
   function getNumber(){
-    return (Math.floor(Math.random()*256))
+    return (Math.floor(Math.random()*256));
   }
   var color = 'rgb('+r+','+g+','+b+')';
-  console.log(color);
   return color;
 }
 

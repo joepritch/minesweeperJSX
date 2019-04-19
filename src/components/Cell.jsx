@@ -6,7 +6,7 @@ function Cell(props){
 
   function test(id){
 
-    console.log(id)
+    console.log(id);
   }
 
 
@@ -17,7 +17,7 @@ function Cell(props){
             grid-area: ('cell'+(${props.id}+1));
             width:50px;
             height:50px;
-            border:groove 5px lightgrey;
+            border:outset 5px lightgrey;
             box-sizing:border-box;
             background-color:darkgrey;
             font-size:10px;
@@ -27,8 +27,8 @@ function Cell(props){
             border:solid 1px darkgrey;
           }
           `}</style>
-        <h1>{props.mine} {props.id}</h1>
-      </div>
+      <h1>{props.mine} {props.id}</h1>
+    </div>
   );
 }
 

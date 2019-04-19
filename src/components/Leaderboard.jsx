@@ -14,28 +14,29 @@ const scores = [
 
 function Leaderboard(){
 
-
   return(
     <div>
       <style jsx>{`
           .board{
             border: solid black 2px;
             border-radius:15px;
-            background-color: rgba(0,0,0,.8);
+            background-color: rgba(0,0,0,.5);
             color:white;
+            box-shadow: 0px 10px 20px black;
+            padding:15px;
           }
       `}</style>
       <h1>Leaderboard Test</h1>
       <div className="board">
         {scores.map((user, index) =>
           <Leaders name={user.name}
-          score={user.score}
-          key={index}
+            score={user.score}
+            key={index}
           />
         )}
       </div>
     </div>
-  )
+  );
 }
 
 

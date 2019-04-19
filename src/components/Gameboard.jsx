@@ -1,5 +1,6 @@
 import React from 'react';
 import Cell from './Cell';
+import Leaderboard from './Leaderboard';
 
 const cells = [
   {
@@ -93,7 +94,7 @@ function Gameboard(){
         "cell11 cell12 cell13 cell14 cell15"
         "cell16 cell17 cell18 cell19 cell20"
         "cell21 cell22 cell23 cell24 cell25";
-        border: groove 5px white;
+        border: outset 5px white;
       }
     `}</style>
       <div className="minefield">
@@ -103,6 +104,7 @@ function Gameboard(){
             key={index}/>
         )}
       </div>
+      <Leaderboard/>
     </div>
   );
 }

@@ -9,11 +9,11 @@ function App(){
 
   return (
     <div>
-      <link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"/>
       <style global jsx>{`
         html{
-          animation: rgb 10s infinite alternate;
-          font-family: 'Dokdo', cursive;
+          animation: rgb 20s infinite alternate;
+          font-family: 'Cute Font', cursive;
         }
         @keyframes rgb {
           0%   {background-color:${randColor()};}

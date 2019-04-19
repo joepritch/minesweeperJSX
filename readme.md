@@ -15,7 +15,8 @@ Error page
 Unforeseen issues:
 It seems like trying to change the class of an element in React might require the use of state.
 
-Getting the current route seems more complex than I anticipated.
+~~Getting the current route seems more complex than I anticipated.~~
+Looked at the react-router-dom documentation and discovered `location.hash`
 
 Development Differences:
 
