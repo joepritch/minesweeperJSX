@@ -10,6 +10,13 @@ Page ideas:
 Splash page with minefield config input
 Error page
 
+use state to define minefield
+width and length properties
+total cells = width * length
+create a function to generate a css grid with the defined width and length of the minefield
+create a function to generate divs equal to the amount of total cells
+create a function that set the cell x and y value by looping through the minefield width and incrementing the minefield height by 1 
+
 
 Unforeseen issues:
 It seems like trying to change the class of an element in React might require the use of state.

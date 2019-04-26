@@ -4,17 +4,12 @@ import randColor from './RandColor';
 
 function Cell(props){
 
-  function test(id){
-
-    console.log(id);
-  }
-
 
   return(
-    <div onClick={test} id={props.id} className="cell">
+    <div id={props.id} className="cell">
       <style jsx>{`
           .cell{
-            grid-area: ('cell'+(${props.id}+1));
+            grid-column: ${props.id};
             width:50px;
             height:50px;
             border:outset 5px lightgrey;
