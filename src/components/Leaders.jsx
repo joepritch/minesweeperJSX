@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Leaders(props){
 
   var url = location.hash;
-  var score = (<h3>{props.score}</h3>)
+  var score = (<h3>{props.score}</h3>);
 
   function htmlBuilder(html){
     return(
@@ -14,19 +14,19 @@ function Leaders(props){
               border:solid 1px blue;
             }
             `}</style>
-          <h1>{props.name}</h1>
-          {html}
-          <hr/>
-        </div>
-      );
-    }
+        <h1>{props.name}</h1>
+        {html}
+        <hr/>
+      </div>
+    );
+  }
 
   if (url == '#/') {
     return htmlBuilder(null);
   } else if (url == '#/leaderboard') {
-      return htmlBuilder(score)
+    return htmlBuilder(score);
   } else {
-    return htmlBuilder("How are you here?")
+    return htmlBuilder('How are you here?');
   }
 
 }
