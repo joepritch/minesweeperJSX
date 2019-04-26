@@ -8,9 +8,8 @@ I will have to find a way to add multiple pages to this project. I'm considering
 
 Page ideas:
 Splash page with minefield config input
-Game page (could also have config input here)
-leaderboard page (maybe the leaderboard page is more in-depth/ has more information, and the game page has a simplified leaderboard component)
 Error page
+
 
 Unforeseen issues:
 It seems like trying to change the class of an element in React might require the use of state.
@@ -21,4 +20,3 @@ Looked at the react-router-dom documentation and discovered `location.hash`
 Development Differences:
 
   The Angular version of this project relied on a lot of Angular-specific code such as ngFor, ngClass, and adding click functions directly into the html.
- 
