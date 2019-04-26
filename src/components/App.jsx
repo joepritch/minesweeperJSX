@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './Header';
-import Gameboard from './Gameboard';
+import Minefield from './Minefield';
 import DefineGame from './DefineGame';
+import ContentContainer from './ContentContainer';
 import randColor from './RandColor';
 import Leaderboard from './Leaderboard';
 import { Switch, Route } from 'react-router-dom';
@@ -26,7 +27,7 @@ function App(){
       `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={DefineGame}/>
+        <Route exact path='/' component={ContentContainer}/>
         <Route exact path='/leaderboard' component={Leaderboard}/>
       </Switch>
     </div>

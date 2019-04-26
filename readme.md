@@ -10,16 +10,19 @@ Page ideas:
 Splash page with minefield config input
 Error page
 
-use state to define minefield
-width and length properties
+collect width, height, and amount of mines as specs
+pass specs to stateful gameboard component as props
+use props to set minefield state
+
 total cells = width * length
 create a function to generate a css grid with the defined width and length of the minefield
 create a function to generate divs equal to the amount of total cells
-create a function that set the cell x and y value by looping through the minefield width and incrementing the minefield height by 1 
+create a function that set the cell x and y value by looping through the minefield width and incrementing the minefield height by 1
 
 
 Unforeseen issues:
-It seems like trying to change the class of an element in React might require the use of state.
+~~It seems like trying to change the class of an element in React might require the use of state.~~
+I thought that state would need to exist in my 'DefineGame' component, but realized that state could exist just within the 'Gameboard' component if I ~~passed along the specs of the minefield as props~~ returned the specs.
 
 ~~Getting the current route seems more complex than I anticipated.~~
 Looked at the react-router-dom documentation and discovered `location.hash`
