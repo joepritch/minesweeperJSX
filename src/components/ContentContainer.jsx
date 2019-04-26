@@ -6,22 +6,32 @@ class ContentContainer extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      gameDisplayed: true
+      gameDisplayed: false,
+      minefieldSpecs: {
+        height: 0,
+        width: 0,
+        mines: 0
+      }
     }
     this.handleStartNewGame = this.handleStartNewGame.bind(this);
   }
 
-  handleStartNewGame(){
-    var newGame = false;
+  handleStartNewGame(height, width, mines){
+    var newMinefieldSpecs = Object.assign({}, this.state.minefieldSpecs);
+    newMinefieldSpecs.height = height;
+    newMinefieldSpecs.width = width;
+    newMinefieldSpecs.mines = mines;
+    this.setState({minefieldSpecs: newMinefieldSpecs});
+    var newGame = true;
     this.setState({gameDisplayed: newGame});
   }
 
   render(){
     let content = null;
     if (this.state.gameDisplayed) {
-      content = <Minefield onNewGame={this.handleStartNewGame}/>
+      content = <Minefield minefieldSpecs={this.state.minefieldSpecs}/>
     } else {
-      content = <DefineGame/>
+      content = <DefineGame onNewGame={this.handleStartNewGame}/>
     }
     return(
     <div>

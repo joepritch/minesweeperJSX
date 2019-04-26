@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DefineGame(){
+function DefineGame(props){
 
   let _height = null;
   let _width = null;
@@ -8,6 +8,7 @@ function DefineGame(){
 
   function grabSpecs(event){
     event.preventDefault();
+    props.onNewGame(_height.value, _width.value, _mines.value);
   }
 
   return(

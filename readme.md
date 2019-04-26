@@ -10,6 +10,8 @@ Page ideas:
 Splash page with minefield config input
 Error page
 
+use define game to hold minefield component, define game collects information about the minefield in a form, then takes the value from that for and uses it to 
+
 collect width, height, and amount of mines as specs
 pass specs to stateful gameboard component as props
 use props to set minefield state

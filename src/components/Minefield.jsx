@@ -9,9 +9,18 @@ class Minefield extends React.Component{
       minefield: {
         height: 0,
         width: 0,
-        mines: []
-      }
+        mines: 0
+      },
     };
+  }
+
+  componentWillReceiveProps(props){
+    console.log(props.minefield);
+    var newMinefield = Object.assign({}, this.state.minefield)
+    newMinefield.height = props.minefieldSpecs.height;
+    newMinefield.width = props.minefieldSpecs.width;
+    newMinefield.mines = props.minefieldSpecs.mines;
+    this.setState({minefield: newMinefield})
   }
 
   render(props){
@@ -20,11 +29,15 @@ class Minefield extends React.Component{
         <style jsx>{`
           .minefield{
             display: grid;
-            grid-template: repeat(5, 50px);
+            width: ${this.state.minefield.width * 50}px;
+            grid-template-columns: repeat(${this.state.minefield.height}, 50px);
+            grid-template-rows: repeat(${this.state.minefield.width}, 50px);
             border: outset 5px white;
           }
           `}</style>
-        <button>test</button>
+        <div className='minefield'>
+
+        </div>
         <Leaderboard/>
       </div>
     );
