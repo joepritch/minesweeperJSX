@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import ContentContainer from './ContentContainer';
+import Game from './Game';
 import randColor from './RandColor';
 import Leaderboard from './Leaderboard';
 import { Switch, Route } from 'react-router-dom';
@@ -25,7 +25,7 @@ function App(){
       `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={ContentContainer}/>
+        <Route exact path='/' component={Game}/>
         <Route exact path='/leaderboard' component={Leaderboard}/>
       </Switch>
     </div>

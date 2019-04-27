@@ -2,18 +2,17 @@ import React from 'react';
 
 function DefineGame(props){
 
-  let _height = null;
-  let _width = null;
-  let _mines = null;
+  let _height = 0;
+  let _width = 0;
+  let _mines = 0;
 
-  function grabSpecs(event){
-    event.preventDefault();
-    props.onNewGame(_height.value, _width.value, _mines.value);
+  function passBack(){
+    props.onGrabUserInput(_height.value, _width.value, _mines.value);
   }
 
   return(
     <div>
-      <form onSubmit={grabSpecs}>
+      <form onSubmit={passBack}>
         <h1>Define height</h1>
         <input id="height" type="number" ref={(input) => {_height = input;}} required></input>
         <h1>Define width</h1>

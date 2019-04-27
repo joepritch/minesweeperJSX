@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Cell(props){
-  console.log("cells loaded");
 
   return(
     <div className="cell">
       <style jsx>{`
           .cell{
-            grid-column: ${props.yPOS};
-            grid-row: ${props.xPOS};
-            width:50px;
-            height:50px;
+            grid-column: ${props.xPOS +1};
+            grid-row: ${props.yPOS +1};
+            width:30px;
+            height:30px;
             border:outset 5px lightgrey;
             box-sizing:border-box;
             background-color:darkgrey;
@@ -22,7 +21,7 @@ function Cell(props){
             border:solid 1px darkgrey;
           }
           `}</style>
-      <h1>{props.mine}</h1>
+        <p>{props.xPOS} {props.yPOS}</p>
     </div>
   );
 }

@@ -12,7 +12,7 @@ Error page
 
 reorder components
 
-app > leaderboard && game > define game && leaderboard && minefield > cell
+app > leaderboard && header && game > define game && leaderboard && minefield > cell
 
 content container is useless and could be replaced by app, but will be removed entirely
 define game will become stateless, and pass-back values via callback function served as a prop
