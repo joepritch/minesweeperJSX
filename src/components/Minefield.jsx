@@ -11,16 +11,34 @@ class Minefield extends React.Component{
         width: 0,
         mines: 0
       },
+      cellArray: []
     };
   }
 
+  generateCells(){
+    var cellCount = (this.state.minefield.height * this.state.minefield.width);
+    var mineCount = this.state.minefield.mines;
+    var newCellArray = [];
+    var cell = {};
+    for (var i = 0; i < cellCount; i++) {
+      var y = Math.ceil((i/this.state.minefield.width));
+      var x = i % this.state.minefield.width;
+      var cell = {xPOS: x, yPOS: y, mine: false}
+      newCellArray.push(cell);
+    }
+    this.setState({cellArray: newCellArray})
+  }
+
   componentWillReceiveProps(props){
-    console.log(props.minefield);
     var newMinefield = Object.assign({}, this.state.minefield)
     newMinefield.height = props.minefieldSpecs.height;
     newMinefield.width = props.minefieldSpecs.width;
     newMinefield.mines = props.minefieldSpecs.mines;
-    this.setState({minefield: newMinefield})
+    this.setState({minefield: newMinefield});
+    this.generateCells();
+  }
+
+  componentDidMount(){
   }
 
   render(props){
@@ -33,6 +51,9 @@ class Minefield extends React.Component{
             grid-template-columns: repeat(${this.state.minefield.height}, 50px);
             grid-template-rows: repeat(${this.state.minefield.width}, 50px);
             border: outset 5px white;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
           }
           `}</style>
         <div className='minefield'>
