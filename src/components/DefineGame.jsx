@@ -23,7 +23,7 @@ function DefineGame(props){
         <button type='submit'>Generate</button>
       </form>
     </div>
-  )
+  );
 }
 
 export default DefineGame;

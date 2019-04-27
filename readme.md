@@ -10,7 +10,23 @@ Page ideas:
 Splash page with minefield config input
 Error page
 
-use define game to hold minefield component, define game collects information about the minefield in a form, then takes the value from that for and uses it to 
+reorder components
+
+app > leaderboard && game > define game && leaderboard && minefield > cell
+
+content container is useless and could be replaced by app, but will be removed entirely
+define game will become stateless, and pass-back values via callback function served as a prop
+minefield will be split into game and minefield
+game will have state for all components
+
+
+
+
+
+
+
+
+use define game to hold minefield component, define game collects information about the minefield in a form, then takes the value from that for and uses it to
 
 collect width, height, and amount of mines as specs
 pass specs to stateful gameboard component as props

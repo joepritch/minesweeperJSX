@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import randColor from './RandColor';
 
 function Cell(props){
-
+  console.log("cells loaded");
 
   return(
-    <div id={props.id} className="cell">
+    <div className="cell">
       <style jsx>{`
           .cell{
-            grid-column: ${props.id};
+            grid-column: ${props.yPOS};
+            grid-row: ${props.xPOS};
             width:50px;
             height:50px;
             border:outset 5px lightgrey;
@@ -22,14 +22,10 @@ function Cell(props){
             border:solid 1px darkgrey;
           }
           `}</style>
-      <h1>{props.mine} {props.id}</h1>
+      <h1>{props.mine}</h1>
     </div>
   );
 }
 
-Cell.propTypes = {
-  mine: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired
-};
 
 export default Cell;

@@ -1,7 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Minefield from './Minefield';
-import DefineGame from './DefineGame';
 import ContentContainer from './ContentContainer';
 import randColor from './RandColor';
 import Leaderboard from './Leaderboard';
