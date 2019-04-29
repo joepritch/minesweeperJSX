@@ -32,15 +32,16 @@ class Game extends React.Component{
       var cell = {xPOS: x, yPOS: y, mine: false};
       newCellArray.push(cell);
     }
+    console.log(newCellArray);
     this.setState({cellArray: newCellArray});
   }
 
-  handleGrabUserInput(height, width, mines){
+  async handleGrabUserInput(height, width, mines){
     var newMinefield = Object.assign({}, this.state.minefieldSpecs);
     newMinefield.height = height;
     newMinefield.width = width;
     newMinefield.mines = mines;
-    this.setState({minefieldSpecs: newMinefield});
+    await this.setState({minefieldSpecs: newMinefield});
     this.generateCells();
   }
 
