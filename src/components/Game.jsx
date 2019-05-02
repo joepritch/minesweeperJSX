@@ -33,7 +33,19 @@ class Game extends React.Component{
       newCellArray.push(cell);
     }
     console.log(newCellArray);
-    this.setState({cellArray: newCellArray});
+    // this.setState({cellArray: newCellArray});
+    this.addMines(newCellArray);
+  }
+
+  addMines(newCellArray){
+    var mineArray = [];
+    var totalMines = this.state.minefieldSpecs.mines;
+    for (var i = 0; i <= totalMines; i++) {
+      var mine = Math.floor(Math.random()*newCellArray.length);
+      if (mineArray.includes(mine) === false) {
+        mineArray.push(mine);
+      }
+    }
   }
 
   async handleGrabUserInput(height, width, mines){
