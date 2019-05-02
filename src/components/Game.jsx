@@ -9,9 +9,9 @@ class Game extends React.Component{
     super(props);
     this.state = {
       minefieldSpecs: {
-        height: 5,
-        width: 5,
-        mines: 5
+        height: 10,
+        width: 10,
+        mines: 60
       },
       cellArray: [],
       userInputDisplayed: true
@@ -40,11 +40,12 @@ class Game extends React.Component{
   addMines(newCellArray){
     var mineArray = [];
     var totalMines = this.state.minefieldSpecs.mines;
-    for (var i = 0; i <= totalMines; i++) {
+    for (var i = 0; mineArray.length < totalMines; i++) {
       var mine = Math.floor(Math.random()*newCellArray.length);
       if (mineArray.includes(mine) === false) {
         mineArray.push(mine);
       }
+      console.log(mineArray);
     }
   }
 
