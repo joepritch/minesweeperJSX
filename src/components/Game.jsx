@@ -37,15 +37,24 @@ class Game extends React.Component{
     this.addMines(newCellArray);
   }
 
+  //This Code works but is not effecient, especially at higher mine counts
+
+  // addMines(newCellArray){
+  //   var mineArray = [];
+  //   var totalMines = this.state.minefieldSpecs.mines;
+  //   for (var i = 0; mineArray.length < totalMines; i++) {
+  //     var mine = Math.floor(Math.random()*newCellArray.length);
+  //     if (mineArray.includes(mine) === false) {
+  //       mineArray.push(mine);
+  //     }
+  //   }
+  // }
+
   addMines(newCellArray){
-    var mineArray = [];
-    var totalMines = this.state.minefieldSpecs.mines;
-    for (var i = 0; mineArray.length < totalMines; i++) {
-      var mine = Math.floor(Math.random()*newCellArray.length);
-      if (mineArray.includes(mine) === false) {
-        mineArray.push(mine);
-      }
-      console.log(mineArray);
+    let mines = [];
+    while (mines.length < this.state.minefieldSpecs.mines ) {
+      let index = Math.floor(Math.random()*newCellArray.length);
+      mines.push(newCellArray.splice(index,1)[0]);
     }
   }
 
