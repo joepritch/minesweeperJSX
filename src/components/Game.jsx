@@ -9,9 +9,9 @@ class Game extends React.Component{
     super(props);
     this.state = {
       minefieldSpecs: {
-        height: 10,
-        width: 10,
-        mines: 60
+        height: 5,
+        width: 5,
+        mines: 5
       },
       cellArray: [],
       userInputDisplayed: true
@@ -32,9 +32,10 @@ class Game extends React.Component{
       var cell = {xPOS: x, yPOS: y, mine: false};
       newCellArray.push(cell);
     }
-    console.log(newCellArray);
-    // this.setState({cellArray: newCellArray});
-    this.addMines(newCellArray);
+    this.determineMines(newCellArray);
+    // console.log(mines);
+    // console.log(newCellArray);
+    // this.setState({cellArray:newCellArray})
   }
 
   //This Code works but is not effecient, especially at higher mine counts
@@ -50,12 +51,25 @@ class Game extends React.Component{
   //   }
   // }
 
-  addMines(newCellArray){
+  determineMines(newCellArray){
     let mines = [];
+    let cellArray = newCellArray.slice(0);
     while (mines.length < this.state.minefieldSpecs.mines ) {
-      let index = Math.floor(Math.random()*newCellArray.length);
-      mines.push(newCellArray.splice(index,1)[0]);
+      let index = Math.floor(Math.random()*cellArray.length);
+      mines.push(cellArray.splice(index,1)[0]);
     }
+    this.insertMines(newCellArray,mines)
+  }
+
+  insertMines(newCellArray, mines){
+    for (var i = 0; i < newCellArray.length; i++) {
+      for (var j = 0; j < mines.length; j++) {
+        if (newCellArray[i].xPOS == mines[j].xPOS && newCellArray[i].yPOS == mines[j].yPOS) {
+          newCellArray[i].mine = true;
+        }
+      }
+    }
+    this.setState({cellArray: newCellArray})
   }
 
   async handleGrabUserInput(height, width, mines){

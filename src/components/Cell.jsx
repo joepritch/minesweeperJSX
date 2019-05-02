@@ -3,6 +3,15 @@ import PropTypes from 'prop-types';
 
 function Cell(props){
 
+  function color(){
+  if (props.mine === true) {
+    return 'red'
+  } else {
+      return 'darkgrey'
+    }
+  }
+
+
   return(
     <div className="cell">
       <style jsx>{`
@@ -13,7 +22,7 @@ function Cell(props){
             height:30px;
             border:outset 5px lightgrey;
             box-sizing:border-box;
-            background-color:darkgrey;
+            background-color:${color()};
             font-size:10px;
           }
           .cellClicked{
