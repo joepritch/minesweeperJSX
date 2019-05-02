@@ -33,23 +33,7 @@ class Game extends React.Component{
       newCellArray.push(cell);
     }
     this.determineMines(newCellArray);
-    // console.log(mines);
-    // console.log(newCellArray);
-    // this.setState({cellArray:newCellArray})
   }
-
-  //This Code works but is not effecient, especially at higher mine counts
-
-  // addMines(newCellArray){
-  //   var mineArray = [];
-  //   var totalMines = this.state.minefieldSpecs.mines;
-  //   for (var i = 0; mineArray.length < totalMines; i++) {
-  //     var mine = Math.floor(Math.random()*newCellArray.length);
-  //     if (mineArray.includes(mine) === false) {
-  //       mineArray.push(mine);
-  //     }
-  //   }
-  // }
 
   determineMines(newCellArray){
     let mines = [];
@@ -80,8 +64,6 @@ class Game extends React.Component{
     await this.setState({minefieldSpecs: newMinefield});
     this.generateCells();
   }
-
-
 
   render(){
     let content = null;
