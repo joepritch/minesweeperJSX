@@ -1,6 +1,5 @@
 import React from 'react';
 import Cell from './Cell';
-import Leaderboard from './Leaderboard';
 
 function Minefield(props){
 
@@ -26,7 +25,8 @@ function Minefield(props){
             yPOS = {cell.yPOS}
             mine = {cell.mine}
             key = {index}
-            />
+            id = {index}
+          />
         )}
       </div>
     </div>

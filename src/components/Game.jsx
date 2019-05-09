@@ -11,7 +11,7 @@ class Game extends React.Component{
       minefieldSpecs: {
         height: 5,
         width: 5,
-        mines: 5
+        mines: 10
       },
       cellArray: [],
       userInputDisplayed: true
@@ -24,6 +24,7 @@ class Game extends React.Component{
   }
 
   generateCells(){
+    this.setState({cellArray: []})
     var cellCount = (this.state.minefieldSpecs.height * this.state.minefieldSpecs.width);
     var newCellArray = [];
     for (var i = 0; i < cellCount; i++) {
@@ -74,7 +75,7 @@ class Game extends React.Component{
     <div>
       {content}
       <Minefield minefieldSpecs={this.state.minefieldSpecs}
-        cellArray={this.state.cellArray}/>
+        cellArray={this.state.cellArray} onCellClicked={this.handleCellClicked}/>
       <Leaderboard/>
     </div>
     )
