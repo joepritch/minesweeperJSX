@@ -15,6 +15,30 @@ In the future this project will be deployed, and allow users to push their high-
 <img src="./componentDiagram.png"/>
 
 
+## Setup
+
+* Clone, or Download and extract this repo
+* In your command line, navigate to the project directory, then install the relevant packages via the command `npm i`
+* After the packages are installed, run the command `npm run start`
+* In your web browser go to `localhost:8080`
+
+## Known Bugs
+
+  None Currently, though this project is still in development.
+
+
+## Technologies Used
+
+  React, Webpack, NPM, Cmder, Atom
+  
+## Support and Contact
+
+  If you experience issues, or have questions, feel free to contact me [here](mailto:joempritchett@gmail.com). 
+  
+## License
+
+MIT license, Copyright © 2019 Joe Pritchett
+
 ## Notes
 
 You might have noticed that the leaderboard component is rendered twice, this is intentional. On the home page the leaderboard *will* show the names and scores of the top 5 highest scores in the database. going to the leaderboard page will allow you to see the full list of all highscores.
